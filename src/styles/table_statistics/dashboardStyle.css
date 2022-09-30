@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+.seccion-datos{
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-informacion{
+    width: 100%;
+    height: 100%;
+    font-size: small;
+    padding-top: 10px;
+    margin: 25px auto;
+}
+
+.header-informacion{
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;    
+}
+.header-informacion h1{
+    background-color: #092c74;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor-infProyecto{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #092c74;
+    
+}
+
+.clsButton{ 
+display: grid;
+justify-content: flex-end;
+margin-bottom: 10px;
+}
+
+.btAnimacion{
+    cursor: pointer;
+    width: 100%;
+    padding: 5%;
+    background-color: #29497b; 
+    color: #ffffff; 
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+.btAnimacion:hover{
+    background-color: #3969b6;
+    transition: 0.5s;
+}
+
+
+.contenedor-infProyecto a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: #fe9393;
+
+  }

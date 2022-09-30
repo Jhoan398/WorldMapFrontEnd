@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+.seleccion-pais{
+    width: 30%;
+    height: 20%;
+    padding-top: 10px;
+    border-radius: 30px ;
+    text-align: center;
+}
+.seleccion-pais #selector{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: white;
+    border-style: groove;
+    font-size: 15px;
+    height: 30px;
+    padding: 5px;
+    width: 70%;
+
+}
+#selector{
+    text-align: center;
+    border-radius: 5px;
+}

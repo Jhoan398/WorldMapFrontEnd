@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.contenedor-datos{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #1e376d;
+}
+.contenedor-datos h2{
+    color: white;
+}
+
+.contenedores-hijos{
+    width: 30%;
+    height: 70%;
+    padding-top: 10px;
+    border-radius: 30px ;
+
+    text-align: center;
+}
+
+.contenedores-hijos #entrada1{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+.contenedores-hijos #entrada2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+.contenedores-hijos #entrada3{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+}

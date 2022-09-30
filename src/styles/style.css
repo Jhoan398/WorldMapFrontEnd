@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+body {
+    background-image: url(../assets/img/Background.png);
+    background-blend-mode: soft-light;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+}
+
+.contenedor {
+    /*display: flex;*/
+    width: 1550px;
+    height: 100%;
+}
+
+.contenedores{
+    margin-top: 5px;
+    height: 30%;
+    width: 100%;
+    border-radius: 10px;
+    border-style: groove;
+    border-color:white;
+}
+
+.mapamundi {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.stroke {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.603);
+    stroke-width: 3px;
+}
+
+.fill {
+    fill: #5A798C;
+}
+
+.graticule {
+    fill: none;
+    /*stroke: #777; Reticulas del mapa mundi*/
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+.country {
+    fill: #A0A0A0;
+    stroke: rgba(0, 0, 0, 0.651);
+    stroke-width: .5;
+}
+
+.country:hover {
+    fill:  #364C59;
+    stroke: #364C59;
+}
+
+.boundary {
+    fill: none;
+    stroke: rgb(202, 195, 195);
+    stroke-width: .5px;
+}
+
+.countryTooltip {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background: #fff;
+    padding: 5px;
+    text-align: left;
+    border: solid #ccc 1px;
+    color: #666;
+    font-size: 14px;
+    font-family: sans-serif;
+}
