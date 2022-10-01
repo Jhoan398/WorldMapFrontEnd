@@ -5,7 +5,6 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb",
         "plugin:jsx-ally/recommended",
         "plugin:react-hooks/recommended"
     ],
