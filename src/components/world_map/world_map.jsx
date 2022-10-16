@@ -200,8 +200,58 @@ function WorldMap() {
 
             $selectorCountry.addEventListener("change",selectedCountry);
 
+            // The svg
+            // var svg2 = d3.select("svg"),
+            /* width2 = +svg2.attr("width"),
+            height2 = +svg2.attr("height"); */
 
-            console.log(`countryById: `,countryById)
+            // Map and projection
+            /* var projection2 = d3.geoMercator()
+            .scale(85)
+            .translate([width2/2, height2/2*1.3]) */
+
+            // Load world shape AND list of connection
+            Promise.all([
+                d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
+                d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_connectionmap.csv")
+                ]).then( ([data1, data2]) => {
+                    // do stuff
+                    ready({}, data1, data2)
+                }).catch(err => console.log('Error loading or parsing data.'))
+
+            function ready(error, dataGeo, data) {
+                // Reformat the list of link. Note that columns in csv file are called long1, long2, lat1, lat2
+                var link = []
+                data.forEach(function(row){
+                    var source = [+row.long1, +row.lat1]
+                    var target = [+row.long2, +row.lat2]
+                    var topush = {type: "LineString", coordinates: [source, target]}
+                    link.push(topush)
+                })
+
+                // Draw the map
+                svg.append("g")
+                    .selectAll("path")
+                    .data(dataGeo.features)
+                    .enter().append("path")
+                        .attr("fill", "#b8b8b8")
+                        .attr("d", d3.geoPath()
+                            .projection(projection)
+                        )
+                        .style("stroke", "#fff")
+                        .style("stroke-width", 0)
+
+                // Add the path
+                svg.selectAll("myPath")
+                .data(link)
+                .enter()
+                .append("path")
+                    .attr("d", function(d){ return path(d)})
+                    .style("fill", "none")
+                    .style("stroke", "#69b3a2")
+                    .style("stroke-width", 2)
+
+            }
         }
     );
 
